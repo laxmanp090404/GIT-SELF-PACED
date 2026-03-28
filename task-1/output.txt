@@ -1,0 +1,62 @@
+PS D:\PRESIDIO\SELF PACED\GIT> git init
+Initialized empty Git repository in D:/PRESIDIO/SELF PACED/GIT/.git/
+PS D:\PRESIDIO\SELF PACED\GIT> cd .\task-1                      
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> echo "Welcome to Presidio"
+> file1.txt
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git add .\file1.txt       
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git commit -m"feat:file1.txt added"
+[master (root-commit) 29a8f0a] feat:file1.txt added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 task-1/file1.txt
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git branch
+* master
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git branch inno-feature   
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git branch
+  inno-feature
+* master
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git checkout inno-feature
+Switched to branch 'inno-feature'
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git branch
+* inno-feature
+  master
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> echo "innovative feature">>file1.txt
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git status
+On branch inno-feature
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git add .  
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git commit -m"feat:Updated
+ new feature"              
+[inno-feature a05f837] feat:Updated new feature
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git status
+On branch inno-feature
+nothing to commit, working tree clean
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git checkout master
+Switched to branch 'master'
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git status
+On branch master
+nothing to commit, working tree clean
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git merge inno-feature
+Updating 29a8f0a..a05f837
+Fast-forward
+ task-1/file1.txt | Bin 44 -> 84 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> git log
+commit a05f8370f542dbcf7f22468703ce9bdc6d48c912 (HEAD -> master,
+ inno-feature)
+Author: Laxman P <laxmanpanjalingam2004@gmail.com>
+Date:   Sat Mar 28 15:46:03 2026 +0530
+
+    feat:Updated new feature
+
+commit 29a8f0ab7851ec532f0e4a7701c45423904debf3
+Author: Laxman P <laxmanpanjalingam2004@gmail.com>
+Date:   Sat Mar 28 15:39:54 2026 +0530
+
+    feat:file1.txt added
+PS D:\PRESIDIO\SELF PACED\GIT\task-1> 
