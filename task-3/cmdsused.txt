@@ -1,0 +1,88 @@
+PS D:\PRESIDIO\SELF PACED\GIT> cd task-3
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> echo "summa  content" > file3.txt 
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git add file3.txt                 
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git commit -m"task-3:initial commit"
+[master 4083efa] task-3:initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 task-3/file3.txt
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> echo "new content changes" >> file3.txt
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> type file3.txt  
+summa  content
+new content changes
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git restore file3.txt
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> type file3.txt       
+summa  content
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> echo "feature added" >> file3.txt
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git add file3.txt
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git commit -m"file3:feature added"
+[master ec48cef] file3:feature added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git log
+commit ec48cef9b92145d041a76e4962cf969ecab84e70 (HEAD -> master)
+Author: Laxman P <laxmanpanjalingam2004@gmail.com>
+Date:   Tue Mar 31 22:20:28 2026 +0530
+
+    file3:feature added
+
+commit 4083efa95f0a7326daba6172ce5a96323efef285
+Author: Laxman P <laxmanpanjalingam2004@gmail.com>
+Date:   Tue Mar 31 22:16:52 2026 +0530
+
+    task-3:initial commit
+
+commit 4b69547f196d2a5d23481e7528032009bcdca762 (origin/master)
+Author: Laxman P <laxmanpanjalingam2004@gmail.com>
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git revert HEAD
+[master 260f392] Revert "file2:feature added"
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> echo "Another change" >> file3.txt
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git add .
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git commit -m "task-3: another change"
+[master cb21d89] task-3: another change
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git log --oneline                     
+cb21d89 (HEAD -> master) task-3: another change
+260f392 Revert "file2:feature added"
+ec48cef file3:feature added
+4083efa task-3:initial commit
+4b69547 (origin/master) task-2 gitignore tracked
+001b35e task-2 completed gitignore used
+b7772ab doc: task-1 readme with cmds added
+b8a4f9d config :task-1 cmd output added
+a05f837 (inno-feature) feat:Updated new feature
+29a8f0a feat:file1.txt added
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git reset --soft HEAD~1
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file3.txt
+
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git reset HEAD~1
+Unstaged changes after reset:
+M       task-3/file3.txt
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git reset --hard HEAD~1
+HEAD is now at 4083efa task-3:initial commit
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> git log --oneline
+4083efa (HEAD -> master) task-3:initial commit
+4b69547 (origin/master) task-2 gitignore tracked
+001b35e task-2 completed gitignore used
+b7772ab doc: task-1 readme with cmds added
+b8a4f9d config :task-1 cmd output added
+a05f837 (inno-feature) feat:Updated new feature
+29a8f0a feat:file1.txt added
+PS D:\PRESIDIO\SELF PACED\GIT\task-3> 
