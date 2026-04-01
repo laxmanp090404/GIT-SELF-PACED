@@ -1,0 +1,62 @@
+PS D:\PRESIDIO\SELF PACED\GIT> git branch
+  branch-A
+  branch-B
+  inno-feature
+* master
+PS D:\PRESIDIO\SELF PACED\GIT> git add .
+PS D:\PRESIDIO\SELF PACED\GIT> git commit -m"task-6:initial commit"
+[master d742873] task-6:initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 task-6/file6.js
+PS D:\PRESIDIO\SELF PACED\GIT> git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   task-6/file6.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\PRESIDIO\SELF PACED\GIT> git stash
+Saved working directory and index state WIP on master: d742873 task-6:initial commit
+PS D:\PRESIDIO\SELF PACED\GIT> git checkout-b bugfix-branch
+git: 'checkout-b' is not a git command. See 'git --help'.
+PS D:\PRESIDIO\SELF PACED\GIT> git branch
+  branch-A
+  branch-B
+  inno-feature
+* master
+PS D:\PRESIDIO\SELF PACED\GIT> git checkout -b bugfix-branch
+Switched to a new branch 'bugfix-branch'
+PS D:\PRESIDIO\SELF PACED\GIT> git stash
+No local changes to save
+PS D:\PRESIDIO\SELF PACED\GIT> git add .
+PS D:\PRESIDIO\SELF PACED\GIT> git commit -m"task6:bugfix imp than stashed work"
+[bugfix-branch 1b28647] task6:bugfix imp than stashed work
+ 1 file changed, 1 insertion(+)
+ create mode 100644 task-6/bugfixfile.js
+PS D:\PRESIDIO\SELF PACED\GIT> git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+PS D:\PRESIDIO\SELF PACED\GIT> git stash list
+stash@{0}: WIP on master: d742873 task-6:initial commit
+PS D:\PRESIDIO\SELF PACED\GIT> git stash pop
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   task-6/file6.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (249cbd49b2da97895d07b5fa046ea490dfe29540)
+PS D:\PRESIDIO\SELF PACED\GIT>
+
+
+
+
