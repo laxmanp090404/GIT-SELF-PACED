@@ -1,0 +1,39 @@
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git branch branch-A
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git branch branch-B
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git checkout branch-A
+Switched to branch 'branch-A'
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git add .
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git commit -m"task4:update from branch A"
+[branch-A 2ec7ea3] task4:update from branch A
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git checkout branch-B
+Switched to branch 'branch-B'
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git add .
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git commit -m"task4:update form branch B"
+[branch-B d615c75] task4:update form branch B
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git checkout branch-A
+Switched to branch 'branch-A'
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git merge branch-B
+Auto-merging task-4/index.js
+CONFLICT (content): Merge conflict in task-4/index.js
+Automatic merge failed; fix conflicts and then commit the result.
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git add .
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git commit -m"task4:resolved conflict from A and B in index"
+[branch-A 580b726] task4:resolved conflict from A and B in index
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> git log --oneline --graph
+*   580b726 (HEAD -> branch-A) task4:resolved conflict from A and B in index
+|\
+| * d615c75 (branch-B) task4:update form branch B
+* | 2ec7ea3 task4:update from branch A
+|/
+* b54b06f (master) task-4:initial js file
+* 15feaba (origin/master) feat : task 3:readme and cmd used added
+* 4083efa task-3:initial commit
+* 4b69547 task-2 gitignore tracked
+* 001b35e task-2 completed gitignore used
+* b7772ab doc: task-1 readme with cmds added
+* b8a4f9d config :task-1 cmd output added
+* a05f837 (inno-feature) feat:Updated new feature
+* 29a8f0a feat:file1.txt added
+PS D:\PRESIDIO\SELF PACED\GIT\task-4> 
