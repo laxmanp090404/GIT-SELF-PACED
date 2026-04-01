@@ -1,0 +1,40 @@
+PS D:\PRESIDIO\SELF PACED\GIT> git checkout branch-A
+Switched to branch 'branch-A'
+PS D:\PRESIDIO\SELF PACED\GIT> git checkout branch-A
+Already on 'branch-A'
+PS D:\PRESIDIO\SELF PACED\GIT> git log --oneline
+b65b3a5 (HEAD -> branch-A) task4:completed cmdused and readme added
+580b726 task4:resolved conflict from A and B in index
+d615c75 (branch-B) task4:update form branch B
+2ec7ea3 task4:update from branch A
+b54b06f task-4:initial js file
+15feaba feat : task 3:readme and cmd used added
+4083efa task-3:initial commit
+PS D:\PRESIDIO\SELF PACED\GIT> git checkout branch-B
+Switched to branch 'branch-B'
+PS D:\PRESIDIO\SELF PACED\GIT> git cherry-pick b65b3a5
+[branch-B 8c5997f] task4:completed cmdused and readme added
+ Date: Wed Apr 1 08:31:02 2026 +0530
+ 3 files changed, 84 insertions(+)
+ create mode 100644 task-4/Mergeconflict.png
+ create mode 100644 task-4/README.md
+ create mode 100644 task-4/cmdused.txt
+PS D:\PRESIDIO\SELF PACED\GIT> git log --oneline
+8c5997f (HEAD -> branch-B) task4:completed cmdused and readme added
+d615c75 task4:update form branch B
+b54b06f task-4:initial js file
+15feaba feat : task 3:readme and cmd used added
+4083efa task-3:initial commit
+4b69547 task-2 gitignore tracked
+001b35e task-2 completed gitignore used
+b7772ab doc: task-1 readme with cmds added
+b8a4f9d config :task-1 cmd output added
+a05f837 (inno-feature) feat:Updated new feature
+29a8f0a feat:file1.txt added
+PS D:\PRESIDIO\SELF PACED\GIT> git branch
+  branch-A
+* branch-B
+  bugfix-branch
+  inno-feature
+  master
+PS D:\PRESIDIO\SELF PACED\GIT> 
