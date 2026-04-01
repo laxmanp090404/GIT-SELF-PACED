@@ -1,0 +1,54 @@
+PS D:\PRESIDIO\SELF PACED\GIT> cd task-5
+PS D:\PRESIDIO\SELF PACED\GIT\task-5> git add .                         
+PS D:\PRESIDIO\SELF PACED\GIT\task-5> git commit -m"init"
+[master 5cf4468] init
+ 1 file changed, 1 insertion(+)
+ create mode 100644 task-5/file5.js
+PS D:\PRESIDIO\SELF PACED\GIT\task-5> git add .
+PS D:\PRESIDIO\SELF PACED\GIT\task-5> git commit -m"update"
+[master 4924789] update
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\PRESIDIO\SELF PACED\GIT\task-5> git commit -am"fix"
+[master 4e7ea12] fix
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\PRESIDIO\SELF PACED\GIT\task-5> git commit -am"final fix"
+[master 657a809] final fix
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\PRESIDIO\SELF PACED\GIT\task-5> git log --oneline                 
+657a809 (HEAD -> master) final fix
+4e7ea12 fix
+4924789 update
+5cf4468 init
+b65b3a5 (origin/master, branch-A) task4:completed cmdused and readme added
+580b726 task4:resolved conflict from A and B in index
+d615c75 (branch-B) task4:update form branch B
+2ec7ea3 task4:update from branch A
+b54b06f task-4:initial js file
+15feaba feat : task 3:readme and cmd used added
+4083efa task-3:initial commit
+4b69547 task-2 gitignore tracked
+001b35e task-2 completed gitignore used
+b7772ab doc: task-1 readme with cmds added
+b8a4f9d config :task-1 cmd output added
+PS D:\PRESIDIO\SELF PACED\GIT\task-5> git rebase -i HEAD~4
+[detached HEAD 22e9c1d] feat: clean implemntation of file5
+ Date: Wed Apr 1 11:47:46 2026 +0530
+ 1 file changed, 1 insertion(+)
+ create mode 100644 task-5/file5.js
+Successfully rebased and updated refs/heads/master.
+PS D:\PRESIDIO\SELF PACED\GIT\task-5> git log --oneline
+22e9c1d (HEAD -> master) feat: clean implemntation of file5
+b65b3a5 (origin/master, branch-A) task4:completed cmdused and readme added
+580b726 task4:resolved conflict from A and B in index
+d615c75 (branch-B) task4:update form branch B
+2ec7ea3 task4:update from branch A
+b54b06f task-4:initial js file
+15feaba feat : task 3:readme and cmd used added
+4083efa task-3:initial commit
+4b69547 task-2 gitignore tracked
+001b35e task-2 completed gitignore used
+b7772ab doc: task-1 readme with cmds added
+b8a4f9d config :task-1 cmd output added
+a05f837 (inno-feature) feat:Updated new feature
+29a8f0a feat:file1.txt added
+PS D:\PRESIDIO\SELF PACED\GIT\task-5> 
