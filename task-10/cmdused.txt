@@ -1,0 +1,211 @@
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT (master)
+$ cd task-10
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (master)
+$ git checkout -b feature-rebase
+Switched to a new branch 'feature-rebase'
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git  commit -am"task10:initial commit"
+On branch feature-rebase
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git commit -am "task10:initial commit"
+On branch feature-rebase
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git add .
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git commit -m "task10:initial commit"
+[feature-rebase aa0fad3] task10:initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 task-10/file10.js
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git commit -am "task10:update "
+[feature-rebase a481113] task10:update
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git commit -am "task10:fix "
+[feature-rebase 7cea9fa] task10:fix
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git log --oneline
+7cea9fa (HEAD -> feature-rebase) task10:fix
+a481113 task10:update
+aa0fad3 task10:initial commit
+fac3a71 (origin/master, master) task-8:completed
+fef1622 valid html
+6467346 task7:completed
+f7d0357 task6:completed
+d742873 task-6:initial commit
+46471be task5:completed along with cmds and editorshots
+22e9c1d feat: clean implemntation of file5
+b65b3a5 (origin/branch-A, branch-A) task4:completed cmdused and readme added
+580b726 task4:resolved conflict from A and B in index
+d615c75 task4:update form branch B
+2ec7ea3 task4:update from branch A
+b54b06f task-4:initial js file
+15feaba feat : task 3:readme and cmd used added
+4083efa task-3:initial commit
+4b69547 task-2 gitignore tracked
+001b35e task-2 completed gitignore used
+b7772ab doc: task-1 readme with cmds added
+b8a4f9d config :task-1 cmd output added
+a05f837 (origin/inno-feature, inno-feature) feat:Updated new feature
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git push -u origin feature-rebase
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (12/12), 990 bytes | 247.00 KiB/s, done.
+Total 12 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 1 local object.
+remote:
+remote: Create a pull request for 'feature-rebase' on GitHub by visiting:
+remote:      https://github.com/laxmanp090404/GIT-SELF-PACED/pull/new/feature-rebase
+remote:
+To https://github.com/laxmanp090404/GIT-SELF-PACED.git
+ * [new branch]      feature-rebase -> feature-rebase
+branch 'feature-rebase' set up to track 'origin/feature-rebase'.
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git rebase -i HEAD~3
+[detached HEAD d26b70a] task10:clean feature implementation
+ Date: Fri Apr 3 11:07:33 2026 +0530
+ 1 file changed, 3 insertions(+)
+ create mode 100644 task-10/file10.js
+Successfully rebased and updated refs/heads/feature-rebase.
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git log --oneline
+d26b70a (HEAD -> feature-rebase) task10:clean feature implementation
+fac3a71 (origin/master, master) task-8:completed
+fef1622 valid html
+6467346 task7:completed
+f7d0357 task6:completed
+d742873 task-6:initial commit
+46471be task5:completed along with cmds and editorshots
+22e9c1d feat: clean implemntation of file5
+b65b3a5 (origin/branch-A, branch-A) task4:completed cmdused and readme added
+580b726 task4:resolved conflict from A and B in index
+d615c75 task4:update form branch B
+2ec7ea3 task4:update from branch A
+b54b06f task-4:initial js file
+15feaba feat : task 3:readme and cmd used added
+4083efa task-3:initial commit
+4b69547 task-2 gitignore tracked
+001b35e task-2 completed gitignore used
+b7772ab doc: task-1 readme with cmds added
+b8a4f9d config :task-1 cmd output added
+a05f837 (origin/inno-feature, inno-feature) feat:Updated new feature
+29a8f0a feat:file1.txt added
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git push --force
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 414 bytes | 414.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/laxmanp090404/GIT-SELF-PACED.git
+ + 7cea9fa...d26b70a feature-rebase -> feature-rebase (forced update)
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git reset --hard HEAD~1
+HEAD is now at fac3a71 task-8:completed
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git log --oneline
+fac3a71 (HEAD -> feature-rebase, origin/master, master) task-8:completed
+fef1622 valid html
+6467346 task7:completed
+f7d0357 task6:completed
+d742873 task-6:initial commit
+46471be task5:completed along with cmds and editorshots
+22e9c1d feat: clean implemntation of file5
+b65b3a5 (origin/branch-A, branch-A) task4:completed cmdused and readme added
+580b726 task4:resolved conflict from A and B in index
+d615c75 task4:update form branch B
+2ec7ea3 task4:update from branch A
+b54b06f task-4:initial js file
+15feaba feat : task 3:readme and cmd used added
+4083efa task-3:initial commit
+4b69547 task-2 gitignore tracked
+001b35e task-2 completed gitignore used
+b7772ab doc: task-1 readme with cmds added
+b8a4f9d config :task-1 cmd output added
+a05f837 (origin/inno-feature, inno-feature) feat:Updated new feature
+29a8f0a feat:file1.txt added
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git reflog
+fac3a71 (HEAD -> feature-rebase, origin/master, master) HEAD@{0}: reset: moving to HEAD~1
+d26b70a (origin/feature-rebase) HEAD@{1}: rebase (finish): returning to refs/heads/feature-rebase
+d26b70a (origin/feature-rebase) HEAD@{2}: rebase (squash): task10:clean feature implementation
+1266d58 HEAD@{3}: rebase (squash): # This is a combination of 2 commits.
+aa0fad3 HEAD@{4}: rebase (start): checkout HEAD~3
+7cea9fa HEAD@{5}: commit: task10:fix
+a481113 HEAD@{6}: commit: task10:update
+aa0fad3 HEAD@{7}: commit: task10:initial commit
+fac3a71 (HEAD -> feature-rebase, origin/master, master) HEAD@{8}: checkout: moving from master to feature-rebase
+fac3a71 (HEAD -> feature-rebase, origin/master, master) HEAD@{9}: commit: task-8:completed
+fef1622 HEAD@{10}: commit: valid html
+6467346 HEAD@{11}: commit: task7:completed
+f7d0357 HEAD@{12}: checkout: moving from branch-B to master
+8c5997f (origin/branch-B, branch-B) HEAD@{13}: cherry-pick: task4:completed cmdused and readme added
+d615c75 HEAD@{14}: checkout: moving from branch-A to branch-B
+b65b3a5 (origin/branch-A, branch-A) HEAD@{15}: checkout: moving from branch-A to branch-A
+b65b3a5 (origin/branch-A, branch-A) HEAD@{16}: checkout: moving from master to branch-A
+f7d0357 HEAD@{17}: commit: task6:completed
+d742873 HEAD@{18}: checkout: moving from bugfix-branch to master
+1b28647 (origin/bugfix-branch, bugfix-branch) HEAD@{19}: commit: task6:bugfix imp than stashed work
+d742873 HEAD@{20}: checkout: moving from master to bugfix-branch
+d742873 HEAD@{21}: reset: moving to HEAD
+d742873 HEAD@{22}: commit: task-6:initial commit
+46471be HEAD@{23}: commit: task5:completed along with cmds and editorshots
+22e9c1d HEAD@{24}: rebase (finish): returning to refs/heads/master
+22e9c1d HEAD@{25}: rebase (squash): feat: clean implemntation of file5
+5fe03b9 HEAD@{26}: rebase (squash): # This is a combination of 3 commits.
+a1d5442 HEAD@{27}: rebase (squash): # This is a combination of 2 commits.
+5cf4468 HEAD@{28}: rebase (start): checkout HEAD~4
+657a809 HEAD@{29}: commit: final fix
+4e7ea12 HEAD@{30}: commit: fix
+4924789 HEAD@{31}: commit: update
+5cf4468 HEAD@{32}: commit: init
+b65b3a5 (origin/branch-A, branch-A) HEAD@{33}: merge branch-A: Fast-forward
+b54b06f HEAD@{34}: checkout: moving from branch-A to master
+b65b3a5 (origin/branch-A, branch-A) HEAD@{35}: commit: task4:completed cmdused and readme added
+580b726 HEAD@{36}: commit (merge): task4:resolved conflict from A and B in index
+2ec7ea3 HEAD@{37}: checkout: moving from branch-B to branch-A
+d615c75 HEAD@{38}: commit: task4:update form branch B
+b54b06f HEAD@{39}: checkout: moving from branch-A to branch-B
+2ec7ea3 HEAD@{40}: commit: task4:update from branch A
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git reset --hard d26b70a
+HEAD is now at d26b70a task10:clean feature implementation
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$ git push --force
+Everything up-to-date
+
+ELCOT@LAXMAN-HOME MINGW64 /d/PRESIDIO/SELF PACED/GIT/task-10 (feature-rebase)
+$
